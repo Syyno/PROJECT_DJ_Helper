@@ -40,8 +40,7 @@ namespace ProjectDJApp
 
             #region подключение к spotify api
             //полчение clientId и clientSecret для доступа к Spotify API
-            string workingDirectory = Environment.CurrentDirectory;
-            var connectionInfo = new ConfigurationBuilder().SetBasePath(Directory.GetParent(workingDirectory).Parent.Parent.FullName).AddJsonFile("appsettings.json").Build();
+            var connectionInfo = new ConfigurationBuilder().SetBasePath(Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName).AddJsonFile("appsettings.json").Build();
             
             var config = SpotifyClientConfig
                 .CreateDefault()
